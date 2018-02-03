@@ -2,6 +2,7 @@
 import os
 os.system('sudo pigpiod') # run pigpio daemon
 os.chdir('/home/pi/STdht22') # cd to where DHT22 python file is
+os.system('git init')
 
 # IMPORTS
 import pigpio, DHT22, time, csv
@@ -49,6 +50,11 @@ def query_sensors(sensor_list):
         tempwriter = csv.writer(csvfile, delimiter= ',')
         tempwriter.writerow(queried_data_list)
         time.sleep(1) # have 1 second spacing between each sensor query
+        
+def update_git():
+    os.system('git add .')
+    os.system('git commit -m "another commit"')
+    os.system('git push  https://BIOE4900github:a321987@github.com/BIOE4900github/BIOE4900github.git master')
 
 def run_aeration_test(test_run_time, query_frequency):
     # run an aeration test, taking sensor queries every X minutes for Y minutes.
@@ -56,7 +62,10 @@ def run_aeration_test(test_run_time, query_frequency):
 
     while time.time() < end_time: #time.time() returns current time in seconds since Jan 1st, 1970
         query_sensors(sensor_list)
+        update_git()
         time.sleep(60 * query_frequency)
+
+
 
 
 run_aeration_test(6,1)
