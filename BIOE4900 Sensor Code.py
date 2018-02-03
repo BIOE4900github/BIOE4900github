@@ -53,7 +53,7 @@ def query_sensors(sensor_list):
         
 def update_git():
     os.system('git add .')
-    os.system('git commit -m "another commit"')
+    os.system('git commit -m "committed datetime.now().strftime("%Y-%m-%d-%H-%M-%S")"')
     os.system('git push  https://BIOE4900github:a321987@github.com/BIOE4900github/BIOE4900github.git master')
 
 def run_aeration_test(test_run_time, query_frequency):
