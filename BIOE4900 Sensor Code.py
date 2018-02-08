@@ -1,7 +1,7 @@
 # START UP
 import os
 os.system('sudo pigpiod') # run pigpio daemon
-os.chdir('/home/pi/STdht22') # cd to where DHT22 python file is
+os.chdir('/home/pi/Project/BIOE4900github') # cd to where DHT22 python file is
 os.system('git init')
 
 # IMPORTS
@@ -10,7 +10,7 @@ from datetime import datetime
 
 # VARIABLES
 pi = pigpio.pi()
-hist_sensor_values_file_path = "/home/pi/STdht22/.git/BIOE4900-sensor-values-" + datetime.now().strftime("%Y-%m-%d-%H-%M-%S")  + ".csv" 
+hist_sensor_values_file_path = "/home/pi/Project/BIOE4900github/BIOE4900-sensor-values-" + datetime.now().strftime("%Y-%m-%d-%H-%M-%S")  + ".csv" 
 
 s1  = DHT22.sensor(pi,4) # sensor 1 on GPIO 4
 s2  = DHT22.sensor(pi,17)

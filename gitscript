@@ -1,4 +1,0 @@
-#!/bin/bash
-git add .
-git commit -m "another commit"
-git push  https://BIOE4900github:a321987@github.com/BIOE4900github/BIOE4900github.git master
