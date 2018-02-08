@@ -1,12 +1,14 @@
 # START UP
 import os
+import pigpio, time, csv
+from datetime import datetime
+
+
+# IMPORTS
 os.system('sudo pigpiod') # run pigpio daemon
 os.chdir('/home/pi/Project/BIOE4900github') # cd to where DHT22 python file is
 os.system('git init')
-
-# IMPORTS
-import pigpio, DHT22, time, csv
-from datetime import datetime
+import DHT22
 
 # VARIABLES
 pi = pigpio.pi()
