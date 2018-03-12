@@ -70,4 +70,4 @@ def run_aeration_test(test_run_time, query_frequency):
 
 
 
-run_aeration_test(6,1)
+run_aeration_test(4320,1)
