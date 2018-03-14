@@ -37,7 +37,7 @@ sensor_list = [s1, s2, s3, s4, s5, s6,s7,s8,s9,s10,s11,s12,s13,s14,s15]
 ## Create CSV File, Header
 with open(hist_sensor_values_file_path, "w") as csvfile:
     tempwriter = csv.writer(csvfile, delimiter= ',')
-    header_string = ['s1t', 's1h', 's1d', 's2t', 's2h', 's2d', 's3t', 's3h', 's3d', 's4t', 's4h', 's4d', 's5t', 's5h', 's5d', 's6t', 's6h', 's6d', 's7t', 's7h', 's7d', 's8t', 's8h', 's8d', 's9t', 's9h', 's9d', 's10t', 's10h', 's10d', 's11t', 's11h', 's11d', 's12t', 's12h', 's12d']
+    header_string = ['Sensor 1 Temp', 'Sensor 1 RH', 'Sensor 1 Date', 'Sensor 2 Temp', 'Sensor 2 RH', 'Sensor 2 Date', 'Sensor 3 Temp', 'Sensor 3 RH', 'Sensor 3 Date', 'Sensor 4 Temp', 'Sensor 4 RH', 'Sensor 4 Date', 'Sensor 5 Temp', 'Sensor 5 RH', 'Sensor 5 Date', 'Sensor 6 Temp', 'Sensor 6 RH', 'Sensor 6 Date', 'Sensor 7 Temp', 'Sensor 7 RH', 'Sensor 7 Date', 'Sensor 8 Temp', 'Sensor 8 RH', 'Sensor 8 Date', 'Sensor 9 Temp', 'Sensor 9 RH', 'Sensor 9 Date', 'Sensor 10 Temp', 'Sensor 10 RH', 'Sensor 10 Date', 'Sensor 11 Temp', 'Sensor 11 RH', 'Sensor 11 Date', 'Sensor 12 Temp', 'Sensor 12 RH', 'Sensor 12 Date', 'Sensor 13 Temp', 'Sensor 13 RH', 'Sensor 13 Date', 'Sensor 14 Temp', 'Sensor 14 RH', 'Sensor 14 Date', 'Sensor 15 Temp', 'Sensor 15 RH', 'Sensor 15 Date' ]
     tempwriter.writerow(header_string)
 
 def query_sensors(sensor_list):
@@ -70,4 +70,4 @@ def run_aeration_test(test_run_time, query_frequency):
 
 
 
-run_aeration_test(4320,1)
+run_aeration_test(10080,1)
